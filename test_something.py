@@ -10,9 +10,9 @@ def test_search_google():
 
 def test_search_duckduckgo():
     browser.open('https://duckduckgo.com')
-    browser.element('[name="q"]').should(be.blank).type('yashaka/selene').press_enter()
-    browser.element('[class="OrganicTextContentSpan"]').should(have.text('Selene - User-oriented Web UI browser tests '
-                                                                         'in Python').not_)
+    browser.element('[id="searchbox_input"]').should(be.blank).type('yashaka/selene').press_enter()
+    browser.element('[class="kY2IgmnCmOGjharHErah"]').should(have.text('Selene - User-oriented Web UI browser tests '
+                                                                         'in Python'))
 
 
 def test_search_yandex():
